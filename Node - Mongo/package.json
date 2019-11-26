@@ -1,0 +1,21 @@
+{
+  "name": "agenda-node",
+  "version": "1.0.0",
+  "description": "agenda NextU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ariel",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.12",
+    "mongoose-auto-increment": "^5.0.1",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.3.0"
+  }
+}
