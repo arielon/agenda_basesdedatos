@@ -9,30 +9,25 @@ const session = require('express-session'),
 
 const app = express();
 
-// connection to db
 mongoose.connect(url)
   .then(db => console.log('db connected'))
   .catch(err => console.log(err));
 
-// importing routes
 const indexRoutes = require('./routes/index');
 
-// settings
 app.set('port', process.env.PORT || 3000);
-app.set('public', path.join(__dirname, '../client'));
+app.set('public', path.join(__dirname, '../public'));
 
-// middlewares
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false}));
-app.use(express.static('public'));
+app.use(express.static('client'));
 app.use(session({
 	secret:"arielon",
 	resave:false,
 	saveUninitialized:false,
 }));	
 
-// routes
 app.use('/', indexRoutes);
 
 

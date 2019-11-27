@@ -1,15 +1,15 @@
-const express = require('express');
-const router = express.Router();
-const Users = require('../model/users');
-const Events = require('../model/events');
-const mongoose = require('mongoose');
-const Operaciones = require('./CRUD.js');
+const express = require('express'),
+      router = express.Router(),
+      Users = require('../model/users'),
+      Events = require('../model/events'),
+      mongoose = require('mongoose'),
+      Operaciones = require('./CRUD.js');
+
 MongoClient = require('mongodb').MongoClient
 
 
 const url = 'mongodb://localhost:27017/mi_agenda_db';
 const dbName = 'mi_agenda_db';
-
 
 router.post('/login', async (req, res) => {
     let mail = req.body.user
