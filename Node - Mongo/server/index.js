@@ -16,12 +16,12 @@ mongoose.connect(url)
 const indexRoutes = require('./routes/index');
 
 app.set('port', process.env.PORT || 3000);
-app.set('public', path.join(__dirname, '../public'));
+app.set('client', path.join(__dirname, '../client'));
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false}));
-app.use(express.static('client'));
+app.use(express.static('../client/'));
 app.use(session({
 	secret:"arielon",
 	resave:false,
