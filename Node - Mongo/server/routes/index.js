@@ -117,11 +117,11 @@ router.post('/events/delete/:_id', async (req, res) => {
       await client.connect();
       //console.log("Connected correctly to server /events/delete");**check point
       const db = client.db(dbName);
-      let id = req.params._id 
+      let id = req.params._id
       console.log(id);
-      Events.remove({_id: id}, function(error) { 
+      Events.remove({_id: id}, function(error) {
         if(error)console.log(error);
-        res.send("Evento eliminado") 
+        res.send("Evento eliminado")
       })
     }catch(err) {
 
