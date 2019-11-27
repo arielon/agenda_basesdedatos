@@ -19,7 +19,7 @@ const indexRoutes = require('./routes/index');
 
 // settings
 app.set('port', process.env.PORT || 3000);
-app.set('public', path.join(__dirname, '../public'));
+app.set('public', path.join(__dirname, '../client'));
 
 // middlewares
 app.use(morgan('dev'));
